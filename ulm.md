@@ -57,9 +57,53 @@ optimisation ? reduire le temps de chargement, soigner experience utilisateur
  lister les outils liés aux besoins du projet
 
  # diagramme de sequence
- détailler les outils des uses case
+ détailler les outils des uses case -> de mettre liens de dépendances et la temporalité (sens du déroulement de l'action). On va utiliser un verbe pour un lien de sequence.
 
+ ------------------------------------------------------
+
+diagramme de class
+
+les verbes sont des methodes  
+donnnées : string/booleens
+
+## TP
+
+on peut mettre les methodes et les attributs en public ou private, pour le private, on met un _ comme `private_type: string;`
+
+```bash
+class Animal {
+  public name: string;
+  public type: string;
  
+  constructor(type: string, name: string) {
+      this.name = name;
+      this.type = type
+  }
+  voice() {
+      console.log(`Cat ${this.name} says myau`);
+  }
+ 
+  transformToDog() {
+      this.type = "Doggy";
+  }
+ 
+  ohNahnahWhatsMyName() {
+    return this.name;
+  }
+ 
+}
+ 
+const cat = new Animal("Cat", "Barsik");
+// Transition animale
+cat.transformToDog();
+cat.voice();
+ 
+const animalName = cat.ohNahnahWhatsMyName();
+console.log("nom de l'animal après transformation : " + animalName);
+```
+
+
+
 
 
 
